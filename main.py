@@ -51,6 +51,7 @@ while True:
         # check if user wants another calculation
         # break the while loop if answer is no
         next_calculation = input("Let's do next calculation? (yes/no): ")
+        next_calculation = next_calculation.lower() # 모든 문자열을 소문자로 변환시켜줌
         if next_calculation == "no":
             break
 
