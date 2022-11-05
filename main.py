@@ -26,6 +26,8 @@ print("3.Multiply")
 print("4.Divide") 
 
 
+finish_state = False # 계산 종료를 위한 상태값
+
 while True:
     # take input from the user
     choice = input("Enter choice(1/2/3): ")
@@ -50,9 +52,16 @@ while True:
 
         # check if user wants another calculation
         # break the while loop if answer is no
-        next_calculation = input("Let's do next calculation? (yes/no): ")
-        next_calculation = next_calculation.lower() # 모든 문자열을 소문자로 변환시켜줌
-        if next_calculation == "no":
+        while True:
+            next_calculation = input("Let's do next calculation? (yes/no): ")
+            next_calculation = next_calculation.lower() # 모든 문자열을 소문자로 변환시켜줌
+            if next_calculation == "no":
+                finish_state = True
+                break
+            elif next_calculation == "why":
+                continue
+        
+        if finish_state == True:
             break
 
     else:
