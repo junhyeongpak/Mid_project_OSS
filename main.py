@@ -56,8 +56,15 @@ while True:
                 # no라고 대답할 경우 다시 Enter choice로 회귀함
                 else:
                     break
-
-            elif next_calculation == "why":
+            # 재확인 루틴 기능 추가
+            elif next_calculation == "why?":
+                continue
+            # 다음 계산을 하는 경우 Enter choice로 회귀함
+            elif next_calculation == "yes":
+                break
+            # 그 외의 이상한 답변이 오는 경우 다시 Let's do next calc로 회귀
+            else:
+                print("Please anwser...(yes/no)")
                 continue
         
         if finish_state == True:
