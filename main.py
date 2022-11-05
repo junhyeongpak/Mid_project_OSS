@@ -61,8 +61,17 @@ while True:
             next_calculation = input("Let's do next calculation? (yes/no): ")
             next_calculation = next_calculation.lower() # 모든 문자열을 소문자로 변환시켜줌
             if next_calculation == "no":
-                finish_state = True
-                break
+                # 종료 루프 개선
+                check = input("Are you sure? (yes/no)")
+                check = check.lower()
+                # 정말 종료 할시 종료
+                if check == "yes":
+                    finish_state = True
+                    break
+                # no라고 대답할 경우 다시 Enter choice로 회귀함
+                else:
+                    break
+
             elif next_calculation == "why":
                 continue
         
