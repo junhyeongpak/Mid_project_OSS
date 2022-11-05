@@ -1,0 +1,11 @@
+The result is 2.0
+Finish Calculation
+---------------------------
+Invalid Input
+The result is 32.0
+Please answer... (yes/no)
+Invalid Input
+Invalid Input
+The result is 6.0
+Finish Calculation
+---------------------------
